@@ -8,7 +8,8 @@ package pruebaproyecto;
  *
  * @author genes
  */
-public class Facturas { private String NombreVendedor;
+public class Facturas {
+    private String NombreVendedor;
     private int Cedula;
     private int codigoFactura;
     private int montoFactura;
@@ -16,7 +17,8 @@ public class Facturas { private String NombreVendedor;
     private int ProductosElectricos;
     private int ProductosAutomotrices;
     private int ProductosConstruccion;
-    private static int totalFacturas = 0; 
+    private int totalFacturas;
+    private boolean tieneVehiculo;
     private static double totalFacturado = 0;
 
     public Facturas(String NombreVendedor, int Cedula, int codigoFactura, int montoFactura, int mes, int ProductosElectricos, int ProductosAutomotrices, int ProductosConstruccion) {
@@ -30,7 +32,7 @@ public class Facturas { private String NombreVendedor;
         this.ProductosConstruccion = ProductosConstruccion;
         
         totalFacturado += montoFactura;
-        totalFacturas++;
+        ;
     }
 
     public int calcularPuntosVendedor() {
@@ -67,3 +69,7 @@ public class Facturas { private String NombreVendedor;
         }
         return bono;
     }
+
+     
+          
+     
